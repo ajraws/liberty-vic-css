@@ -1,1 +1,8 @@
-*.agdai
+# Ignore everything
+*
+
+# But not these files...
+!.css
+
+# ...even if they are in subdirectories
+!*/*.css
