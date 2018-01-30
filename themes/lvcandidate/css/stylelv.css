@@ -54,7 +54,7 @@ h4 a{
     /* text-transform: uppercase; */
 }
 
-h4 a:hover {
+h4 a:hover, h3 a:hover, h2 a:hover {
     color:#4b0f12;
     text-decoration: none;
     box-shadow: inset 0 -3px 0 0 rgba(139, 24, 31, 0.5);
@@ -177,6 +177,14 @@ blockquote{
 }
 
 /* Main Menu*/
+
+#navigation > li.expanded > a, #navigation > li.collapsed > a, #navigation > li.leaf > a, #navigation > li > a, #navigation >li.donate-button > a, #navigation > li.current-menu-item > a {
+    display:block;
+    padding:20px 0px 20px 0px;
+    border-top:none !important;
+    border-bottom: none !important;
+    margin-top:-1px;
+}
 
 #navigation > li > a{
 
@@ -486,6 +494,18 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 
 /* civi styling */
 
+
+.fix-width-50 > .node-event img {
+    width: 40vw !important;
+    margin: 0px;
+    height:auto;
+}
+
+.fix-width-50 > .node-event > .field-name-field-date, .fix-width-50 > .node-event > .field-type-text, .fix-width-50 > .node-event > .field-label-above {
+    text-align:center;
+}
+
+
 .crm-form-text {
     border: 1px solid #175162 !important;
     padding: 8px 10px;
@@ -495,60 +515,48 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 
-/*
+
 #navigation .active-trail a {
 	color:#ffffff;
 }
 
-*/
-
-#navigation li.active-trail {
-    background: #276d7e;
-    color: #ffffff;
-    overflow: hidden;
-}
-
-#navigation > li.active-trail a, #navigation > li.active-trail span {
-    background: none;
-    display: block;
-    /*! height: 9px; */
-    color:inherit;
-}
-
-
-
-#navigation > li.active-trail a:hover, #navigation > li.active-trail span:hover {
-    background: none;
-}
-
-#navigation .active-trail:hover {
-    background: #ffffff;
-    color: #175162;
-}
-
-ul#navigation  {
-    border-left: 1px solid #276d7e;
-}
-
-#navigation > li.expanded:first-child {
-    border-left: 1px solid #276d7e;
-}
 
 /*
 
-#navigation a.active-trail:after,
-#navigation a.active-trail,
-#navigation > li.active-trail > span,
-#navigation > li.active-trail > a {
+#navigation .active-trail:hover, #nagivation .active-trail:hover, #navigation .expanded.active-trail:hover {
+background:red !important;
+color: blue !important;
+}*/
 
- color: #ffffff;
+#block-views-spokesperson-block-2 img, #block-views-spokesperson-block-4 img, #block-views-spokesperson-block-5 img {
+    width: 100% !important;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top:5px;
+    border: 1px solid #276d7e
 }
 
-#navigation a.active-trail:hover:after,
-#navigation a.active-trail:hover,
-#navigation > li.active-trail > span:hover,
-#navigation > li.active-trail > a:hover {
-	 color: #276d73;
+#block-views-spokesperson-block-2 a, #block-views-spokesperson-block-4 a , #block-views-spokesperson-block-5 a {
+    font-size: 100% !important;
+    font-weight:bolder;
+}
+
+#block-views-spokesperson-block-2 div.field-content, #block-views-spokesperson-block-4 div.field-content, #block-views-spokesperson-block-5 div.field-content {
+    font-weight:bolder;
+    font-variant:all-small-caps;
+    margin-bottom:5px;
+    color: #276D7e;
+
+}
+
+#block-views-spokesperson-block-2 a.views-more-link, #block-views-spokesperson-block-4 a.views-more-link, #block-views-spokesperson-block-5 a.views-more-link {
+    font-weight:300;
+}
+
+#block-views-spokesperson-block-2 div.views-field-body, #block-views-spokesperson-block-4 div.views-field-body, #block-views-spokesperson-block-5 div.views-field-body {
+    font-size:90%;
+    margin-top:5px;
 }
 
 #navigation .active-trail, #navigation .expanded.active-trail {
@@ -556,7 +564,45 @@ background:#276D7E;
 color: #ffffff;
 }
 
-#navigation .active-trail:hover, #nagivation .active-trail:hover, #navigation .expanded.active-trail:hover {
-background:red !important;
-color: blue !important;
-}*/
+#navigation .expanded.active-trail  {
+    border-right: 1px solid #175162 !important;
+}
+
+#navigation a.active-trail:after,
+#navigation a.active-trail,
+#navigation > li.active-trail > span,
+#navigation > li.active-trail > a {
+
+ color: #ffffff !important;
+}
+
+#navigation a.active-trail:hover:after,
+#navigation a.active-trail:hover,
+#navigation > li.active-trail > span:hover,
+#navigation > li.active-trail > a:hover,
+#navigation > li.active-trail:hover > a,
+#navigation > li.active-trail:hover > a:after {
+	 color: #276d73 !important;
+	 transition: 0.3s;
+}
+
+#navigation .active-trail ul a {
+background:#ffffff;
+color: #276D7E;
+}
+
+#navigation .active-trail.active {
+    background:#276D7E !important;
+    color: #ffffff !important;
+}
+
+#navigation .active-trail.active:hover {
+    background:#ffffff !important;
+    color: #276D7e !important;
+    border-right: none !important;
+}
+
+#navigation>li:first-child {
+    border-left: 1px solid #276d7e;
+        border-right: 1px solid #175162 !important;
+}
