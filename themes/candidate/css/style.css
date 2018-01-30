@@ -776,7 +776,7 @@ h6.shortcodes-caption {
     text-align: left;
     position: absolute;
     font-size: 15px;
-    background: #f2f4f9;
+    background: none;
     z-index: 6000;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     top: 100%;
@@ -998,7 +998,7 @@ h6.shortcodes-caption {
 }
 
 .main-flexslider .slide {
-    padding: 80px 50px;
+    padding: 10% 20%;
 }
 
 .full-width-slider .slide {
@@ -2618,11 +2618,11 @@ button.small {
 }
 
 .blog-post > .post-image img {
-    border-radius: 10px 10px 0 0 !important;
-    border-left: 1px solid #175162;
-    border-top: 1px solid #175162;
-    border-right: 1px solid #175162;
-    border-bottom: none;
+      border-radius: 10px 10px 10px 10px !important;
+      border-left: 1px solid #175162;
+      border-top: 1px solid #175162;
+      border-right: 1px solid #175162;
+      border-bottom: 1px solid #175162;
 }
 
 .blog-post .post-meta span + span:before {
