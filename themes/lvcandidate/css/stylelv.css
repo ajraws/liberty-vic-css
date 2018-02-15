@@ -666,3 +666,7 @@ margin-left: 15px;
 	 margin-bottom: 10px;
 	border-bottom: 1px solid #eeeeee;
 }
+
+.page-events .blog-post > .post-image img {
+      border-radius: 10px 10px 0px 0px !important;
+}
