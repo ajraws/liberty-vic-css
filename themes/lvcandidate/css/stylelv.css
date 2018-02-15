@@ -25,7 +25,7 @@
 
 iframe{
     width:100%;
-    border:none;
+/*    border:none; */
     height: 400px;
 }
 
@@ -605,4 +605,64 @@ color: #276D7E;
 #navigation>li:first-child {
     border-left: 1px solid #276d7e;
         border-right: 1px solid #175162 !important;
+}
+
+.node-presidents-update .field-name-field-header-image img {
+width: 100%;
+height:auto;
+margin-bottom: 20px;
+}
+
+.node-presidents-update .field-name-event-calendar-date div,
+.node-presidents-update .field-name-field-author div {
+	font-size: 10pt;
+	display: inline-block;
+	float:left;
+	font-weight: 500;
+	line-height: 11.5pt
+}
+
+.node-presidents-update .field-name-body .field-items div{
+	margin-top: 20px;
+}
+
+.node-presidents-update h2 {
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: -5px
+}
+
+.node-type-event-calendar .full-width-map  iframe {
+	border: 1px solid #02909c !important;
+}
+
+.node-type-event-calendar .style-1-frame iframe {
+	width: 100% !important;
+  margin-left: none !important;
+	border: 1px solid #02909c !important;
+  margin-bottom: 20px;
+}
+
+.node-type-event-calendar .style-1-button {
+  display:block;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.node-type-event-calendar .region-content img {
+  width:100%;
+}
+
+@media (max-width: 767px) {
+	.node-type-event-calendar .style-1-button {
+margin-left: 15px;
+  margin-top: 0px;
+
+}
+}
+
+.node-type-submission .field-name-field-laypersons-summary .field-items div {
+	padding-bottom: 10px;
+	 margin-bottom: 10px;
+	border-bottom: 1px solid #eeeeee;
 }
