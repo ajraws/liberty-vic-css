@@ -998,7 +998,7 @@ h6.shortcodes-caption {
 }
 
 .main-flexslider .slide {
-    padding: 10% 20%;
+    padding: 10% 10% 10% 10%;
 }
 
 .full-width-slider .slide {
@@ -1873,9 +1873,12 @@ h6.shortcodes-caption {
     overflow: hidden;
 }
 
-.event-meta.horizontal {
+.event-meta.horizontal:first-child {
     border: solid 1px #175162;
     border-radius: 0 0 10px 10px;
+}
+
+.event-meta.horizontal {
 }
 
 .event-meta-block {
@@ -3795,7 +3798,8 @@ a.button.details-button:hover:after {
 
 .sidebar-box.white {
     background: #ffffff;
-    padding: 0 20px 20px 0;
+    padding: 0 0 0 34%;
+    margin-top: 17px;
 }
 
 .sidebar-box h3 {
@@ -6742,7 +6746,7 @@ input.numeric-input:focus {
     }
 
     .main-flexslider .slide {
-        padding: 60px 40px !important;
+        padding: 15% 15% 15% 15%  !important;
     }
 
     #main_flex_1 .slide {
