@@ -62,36 +62,37 @@
 				</p>
 
 			</div>
-			<?php if(isset($node->field_location['und'][0]['value'])):?>
+
 				<div class="event-meta-block col-lg-3 col-md-3 col-sm-6" style="opacity: 1;">
 
 					<i class="icons icon-location"></i>
 					<p class="title"><?php print t('Event Location')?></p>
-					<p>
-						<?php print $node->field_location['und'][0]['value'];?>
+					<p>	<?php if(isset($node->field_location['und'][0]['value'])):?>
+						<?php print $node->field_location['und'][0]['value'];?>			<?php endif;?>
 					</p>
 
 				</div>
-			<?php endif;?>
 
-			<?php if(isset($node->field_cost['und'][0]['value'])):?>
+
 				<div class="event-meta-block col-lg-3 col-md-3 col-sm-6" style="opacity: 1;">
 
 					<i class="icons icon-ticket"></i>
 					<p class="title">Cost</p>
-					<p>
+					<p>			<?php if(isset($node->field_cost['und'][0]['value'])):?>
 						<?php print $node->field_cost['und'][0]['value'];?>
+		<?php endif;?>
 					</p>
-
 				</div>
-			<?php endif;?>
+
 		</div>
 		<div class="event-post-content">
 
 			<div class="post-header">
 				<h2><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
 				<div class="post-meta">
+					<?php if(isset($node->field_event_category['und'][0]['value'])):?>
 					<span class="categories"><?php print t('in');?> <?php print candidate_format_comma_field('field_event_category', $node); ?></span>
+		<?php endif;?>
 				</div>
 			</div>
 
@@ -116,7 +117,7 @@
 
 <?php else:?>
 	<?php if(!empty($node->field_style_mode) && $node->field_style_mode['und'][0]['value']=='style2'):?>
-		<section class="section full-width full-width-image animate-onscroll">
+		<section class="section padding0 margin0 width100 animate-onscroll">
 				<img src="<?php print $extend_image;?>" alt="">
 		</section>
 		<section class="section full-width-bg gray-bg">
@@ -166,28 +167,31 @@
 											</p>
 
 										</div>
-										<?php if(isset($node->field_location['und'][0]['value'])):?>
+
 											<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 
 												<i class="icons icon-location"></i>
 												<p class="title"><?php print t('Event Location')?></p>
 												<p>
+																							<?php if(isset($node->field_location['und'][0]['value'])):?>
 													<?php print $node->field_location['und'][0]['value'];?>
-												</p>
-
-											</div>
 										<?php endif;?>
-										<?php if(isset($node->field_cost['und'][0]['value'])):?>
+												</p>
+											</div>
+
+
 											<div class="event-meta-block col-lg-3 col-md-3 col-sm-6 animate-onscroll">
 
 												<i class="icons icon-ticket"></i>
 												<p class="title"><?php print t('Cost');?></p>
 												<p>
+																							<?php if(isset($node->field_cost['und'][0]['value'])):?>
 													<?php print $node->field_cost['und'][0]['value'];?>
+																							<?php endif;?>
 												</p>
 
 											</div>
-										<?php endif;?>
+
 									</div>
 									<!-- /Event Meta -->
 
@@ -263,15 +267,20 @@
                                                                                                 </tr>
                                                                                                 <?php endif; ?>
 
+  <?php if (!empty($content['field_event_category']['#items'])): ?>
 												<tr>
 													<td><?php print t('Category:')?></td>
 													<td class="categories"><?php print candidate_format_comma_field('field_event_category', $node); ?></td>
 												</tr>
+												<?php endif; ?>
 
+  <?php if (!empty($content['field_event_tags']['#items'])): ?>
 												<tr>
 													<td><?php print t('Tags:')?></td>
 													<td class="categories tag"><?php print candidate_format_comma_field('field_event_tags', $node); ?></td>
 												</tr>
+												<?php endif; ?>
+
 
 												<tr>
 													<td><?php print t('Share this:')?></td>
@@ -437,56 +446,53 @@
 												</p>
 
 											</div>
-
+  <?php if (!empty($content['field_event_category']['#items'])): ?>
 											<div class="event-meta-block animate-onscroll">
 
 												<i class="icons icon-folder-open"></i>
 												<p class="title"><?php print t('Category')?></p>
 												<p class="categories"><?php print candidate_format_comma_field('field_event_category', $node); ?></p>
-
 											</div>
+											<?php endif;?>
 
+<?php if (!empty($content['field_event_tags']['#items'])): ?>
 											<div class="event-meta-block animate-onscroll" >
-
 												<i class="icons icon-tags"></i>
 												<p class="title"><?php print t('Tags')?></p>
 												<p class="categories tag"><?php print candidate_format_comma_field('field_event_tags', $node); ?></p>
-
-											</div>
-
+											</div><?php endif;?>
+													<?php if(isset($node->field_organizer['und'][0]['value'])):?>
 											<div class="event-meta-block animate-onscroll" >
 
 												<i class="icons icon-user"></i>
 												<p class="title"><?php print t('Organizer')?></p>
 												<p>
-													<?php if(isset($node->field_organizer['und'][0]['value'])):?>
+
 														<?php print $node->field_organizer['und'][0]['value'];?>
-													<?php endif;?>
 												</p>
-
 											</div>
-
+																								<?php endif;?>
+													<?php if(isset($node->field_phone['und'][0]['value'])):?>
 											<div class="event-meta-block animate-onscroll">
 
 												<i class="icons icon-phone"></i>
 												<p class="title"><?php print t('Phone')?></p>
 												<p>
-													<?php if(isset($node->field_phone['und'][0]['value'])):?>
+
 														<?php print $node->field_phone['und'][0]['value'];?>
-													<?php endif;?></p>
-
-											</div>
-
+</p>
+											</div>													<?php endif;?>
+<?php if(isset($node->field_email['und'][0]['value'])):?>
 											<div class="event-meta-block animate-onscroll" >
 
 												<i class="icons icon-mail-alt"></i>
 												<p class="title"><?php print t('Email')?></p>
 												<p>
-													<?php if(isset($node->field_email['und'][0]['value'])):?>
-														<a href="mailto:<?php print $node->field_email['und'][0]['value'];?>"><?php print $node->field_email['und'][0]['value'];?></a>
-													<?php endif;?></p>
 
+														<a href="mailto:<?php print $node->field_email['und'][0]['value'];?>"><?php print $node->field_email['und'][0]['value'];?></a>
+										</p>
 											</div>
+														<?php endif;?>
 
 											<div class="event-meta-block animate-onscroll">
 
