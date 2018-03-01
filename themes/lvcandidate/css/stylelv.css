@@ -809,13 +809,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80175162', e
 }
 */
 
-.themeblock img { max-width: 100%;
-    height: auto;
-    width: auto;
-    max-height: 100px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    border: 1px solid red !important; }
 
 .themeblock {
     width: 50%;
@@ -824,9 +817,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80175162', e
 }
 
 
-.themeblock h4.field-content:before {
-	height:0.5px;
-	color:red;
+.themeblock h4:before {
+	height:1px;
 	width:100%;
 	display:block;
 	background-color: #02909c;
@@ -838,9 +830,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80175162', e
 
 
 .themeblock {
-	border-bottom: 1px solid #02909c;
+	/*border-bottom: 1px solid #02909c;*/
 	padding-bottom: 10px;
 }
+
+
 
 .themeblock .views-field-body {
 	margin-top: 10px;
@@ -860,4 +854,69 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80175162', e
 #main-footer a {
     color: #ffffff;
     font-weight: bold;
+}
+
+.themeblock  div.view-header {
+  padding: 0px;
+  margin: -20px 0px -4px 0px !important;
+}
+
+@media (max-width: 990px) {
+  .themeblock {
+  width: 100% !important;}
+}
+
+.img-div-clip img {
+	width: 100%;
+	height: auto;
+position: relative;
+margin-top:-25%;
+z-index: 10;
+}
+
+div.img-div-clip {
+	max-height:100px;
+	overflow:hidden;
+	margin-bottom: 10px;
+	vertical-align:center;
+	border: 1px solid #02909C;
+	border-radius: 10px;
+	z-index: 99999;
+}
+
+.blueborder {
+  	border: 1px solid #02909C;
+}
+
+.darkblueborder {
+	border: solid 1px #175162;}
+
+  @media (max-width: 990px) {
+  #lower-header {
+      border-bottom: none;
+      border-top: none; }
+     #navigation > li {
+      border-left: 1px solid #276d7e !important;
+      border-right: 1px solid #276d7e !important;}
+      #navigation > li:first-child {
+       }
+      #navigation li a {
+           box-shadow: 0px 0px 0px 1px #276d7e;
+       }
+      div #menu-button {
+           box-shadow: 0px 0px 0px 1px #276d7e;
+           margin-left: 1px !important;
+           margin-bottom: 2px;
+           display:block;
+           max-width:100%;
+           width: 99.7% !important;
+           overflow:hidden;
+
+       }
+  }
+
+@media (max-width: 550px) {
+    div #menu-button {
+           width: 99.5% !important;
+       }
 }
