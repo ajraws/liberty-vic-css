@@ -1874,11 +1874,21 @@ h6.shortcodes-caption {
 }
 
 .event-meta.horizontal:first-child {
-    border: solid 1px #175162;
-    border-radius: 0 0 10px 10px;
 }
 
 .event-meta.horizontal {
+  border-radius: 0px 0px 0px 0px;
+
+}
+
+div.event-meta.horizontal {
+  border-radius: 0px 0px 10px 10px !important;
+  border: solid 1px #175162;
+  border-top: 0px;
+}
+
+div .event-meta-block  {
+  border-top: 0px;
 }
 
 .event-meta-block {
@@ -1950,7 +1960,7 @@ h6.shortcodes-caption {
 }
 
 .horizontal .event-meta-block + .event-meta-block {
-    border-left: 1px solid #f2f4f9;
+    border-left: 1px solid #175162;
 }
 
 .horizontal .event-meta-block:first-child {
