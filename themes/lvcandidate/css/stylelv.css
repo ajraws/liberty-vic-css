@@ -889,7 +889,8 @@ div.img-div-clip {
 }
 
 .darkblueborder {
-	border: solid 1px #175162;}
+border: solid 1px #175162;
+	}
 
   @media (max-width: 990px) {
   #lower-header {
