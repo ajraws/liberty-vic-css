@@ -2110,6 +2110,12 @@ border-left: 1px solid #276d7e !important;}
 
 .padding0 {padding: 0px !important;}
 .margin0 {margin: 0px !important;}
+.padding1 {padding: 1% !important;}
+.margin1 {margin: 1% !important;}
+.padding5 {padding: 5% !important;}
+.margin5 {margin: 5% !important;}
+.padding10 {padding: 10% !important;}
+.margin10 {margin: 10% !important;}
 
 .padding-top0 {padding-top: 0px !important;}
 .padding-top5 {padding-top: 5px !important;}
@@ -2147,6 +2153,8 @@ border-left: 1px solid #276d7e !important;}
 .smaller-font50 {font-size: inherit}
 
 @media (max-width: 990px) {
+  .smaller-font200 {font-size:200% !important;}
+	.smaller-font150 {font-size:150% !important;}
 	.smaller-font100 {font-size:100% !important;}
   .smaller-font80 {font-size:80% !important;}
   .smaller-font50 {font-size:50% !important;}
