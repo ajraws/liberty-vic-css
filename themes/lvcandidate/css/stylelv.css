@@ -61,6 +61,10 @@ h4 a:hover, h3 a:hover, h2 a:hover {
     transition:0.3s;
 }
 
+.white-hover:hover {
+  box-shadow: inset 0 -3px 0 0 rgba(255, 255, 255, 0.5) !important;
+}
+
 h3, h2 {
     color: #276d7e;
     font-weight: bold;
@@ -309,6 +313,7 @@ text-transform:uppercase ;
     padding-bottom: 7px;
     padding-left:16px;
     padding-right:16px;
+    transition: 0.3s;
 
 }
 
@@ -736,7 +741,8 @@ div .sidebar #block-search-form {
 #widgets-element-socialmedia_facebook-like-button {
   margin-left: 5px;
     margin-bottom: 5px;
-    margin-top: 5px
+    margin-top: 5px;
+    max-width: 300px;
 }
 
 #widgets-element-socialmedia_twitter-tweet-no-count {
@@ -789,13 +795,15 @@ opacity: 0.5;}
     transition: 0.3s;
 }
 
-.node-type-media .field-items img {
+
+.node-type-media .field-type-image .field-items img {
   object-fit: cover;
   position: relative;
   width:100%;
+  height: auto;
   max-height:400px;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  /* margin-top: 20px; */
+  /* margin-bottom: 15px; */
 }
 
 /* flex viewport gradient overlay
@@ -866,17 +874,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80175162', e
   width: 100% !important;}
 }
 
-.img-div-clip img {
+.img-div-clip img, .node-type-media.field-items img {
 	width: 100%;
 	height: auto;
 position: relative;
 margin-top:-25%;
-z-index: 10;
+z-index: 1;
 }
 
 div.img-div-clip {
 	max-height:100px;
 	overflow:hidden;
+	margin-bottom: 10px;
+	vertical-align:center;
+	border: 1px solid #02909C;
+	border-radius: 10px;
+	z-index: 99999;
+}
+
+.node-type-media .field-type-image div.even.field-item {
+	max-height: 200px !important;
+	min-height: 200px !important;
+	overflow:hidden !important;
 	margin-bottom: 10px;
 	vertical-align:center;
 	border: 1px solid #02909C;
@@ -934,4 +953,45 @@ div #menu-button{ position: relative; margin-top: 30px; }
 
 #menu-button > div > span {
 	background-color: #276d7e;
+}
+#navigation > li.active-trail:hover > a {
+  color: #ffffff !important;
+}
+
+.block-views table td,
+.block-views table th,
+.page-events table td,
+.page-events table th {
+    vertical-align: top;
+}
+
+@media (max-width: 990px) {
+    .horizontal .event-meta-block + .event-meta-block {
+border-left: 0px solid #ffffff !important;
+    }
+}
+
+
+.node-type-event-calendar .event-meta-block, .node-type-event-calendar .event-meta.horizontal {
+border: 1px solid #ffffff !important;
+}
+
+.node-type-event-calendar .event-meta.horizontal:before{
+border: none;
+border-color: #ffffff;
+background: #276d7e !important;
+width:100%;
+height:1px;
+display:block;
+content: ' ';
+}
+
+.desktop-display-none {
+  display: none;
+}
+
+@media (max-width: 767px) {
+.desktop-display-none {
+    display: block;
+  }
 }
