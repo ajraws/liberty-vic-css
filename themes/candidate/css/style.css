@@ -1915,7 +1915,7 @@ div .event-meta-block  {
 }
 
 .event-meta-block .social-share li a {
-    color: #808ca4;
+    color: #175162;
 }
 
 .event-meta-block:first-child {
@@ -2590,28 +2590,28 @@ button.small {
 }
 
 .social-share li a {
-    color: #cbcdd1;
+    color: #175162;
     font-size: 16px;
 }
 
 .social-share li.facebook:hover a {
-    color: #4862a3;
+    color: #02909c;
 }
 
 .social-share li.twitter:hover a {
-    color: #40bff5;
+    color: #02909c;
 }
 
 .social-share li.google:hover a {
-    color: #eb5b4c;
+    color: #02909c;
 }
 
 .social-share li.pinterest:hover a {
-    color: #cd322c;
+    color: #02909c;
 }
 
 .social-share li.email:hover a {
-    color: #324e79;
+    color: #02909c;
 }
 
 /* Blog */
@@ -5363,28 +5363,27 @@ button.active-button:after {
 /* Tooltips */
 
 .tooltip-inner {
-    background: #4174c5;
+    background: #276d7e;
     font-size: 12px;
     padding: 5px 10px;
     white-space: nowrap;
 }
 
 .tooltip.top .tooltip-arrow {
-    border-top-color: #4174c5;
+    border-top-color: #276d7e;
 }
 
 .tooltip.left .tooltip-arrow {
-    border-left-color: #4174c5;
+    border-left-color: #276d7e;
 }
 
 .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: #4174c5;
+    border-bottom-color: #276d7e;
 }
 
 .tooltip.right .tooltip-arrow {
-    border-right-color: #4174c5;
+    border-right-color: #276d7e;
 }
-
 /* ==================================== */
 
 /* SHORTCODES */
@@ -7268,7 +7267,7 @@ input.numeric-input:focus {
     }
 
     .main-flexslider .slide {
-        padding: 40px 30px !important;
+        padding: 8% 10% 10% 10% !important;
     }
 
     .main-flexslider h2 {
@@ -7722,7 +7721,7 @@ input.numeric-input:focus {
     }
 
     .main-flexslider .slide {
-        padding: 30px !important;
+        padding: 15% !important;
     }
 
     #main_flex_1 .slide {
