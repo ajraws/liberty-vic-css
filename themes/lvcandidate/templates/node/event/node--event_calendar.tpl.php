@@ -256,13 +256,13 @@
 												<tbody>
 												<?php if (!empty($civicrm_event_link) && empty($content['field_register_now_external_url_']['#items'])): ?>
 												<tr>
-													<td><?php print t('Register:')?></td>
+													<td><?php print t('Book:')?></td>
 													<td class="categories"><?php print $civicrm_event_link; ?></td>
 												</tr>
 												<?php endif; ?>
                                                                                                 <?php if (!empty($content['field_register_now_external_url_']['#items'])): ?>
                                                                                                 <tr>
-                                                                                                        <td><?php print t('Register:') ?></td>
+                                                                                                        <td><?php print t('Book:') ?></td>
                                                                                                         <td class="categories"><?php print render($content['field_register_now_external_url_']); ?></td>
                                                                                                 </tr>
                                                                                                 <?php endif; ?>
@@ -495,7 +495,19 @@
 														<?php endif;?>
 
 											<div class="event-meta-block animate-onscroll">
-
+								
+											<?php if (!empty($civicrm_event_link) && empty($content['field_register_now_external_url_']['#items'])): ?>
+												<i class="icons icon-check-1"></i>
+													<p class="title"><?php print t('Book:')?></p>
+													<p class="categories"><?php print $civicrm_event_link; ?></t
+												<?php endif; ?>
+                                                                                                <?php if (!empty($content['field_register_now_external_url_']['#items'])): ?>
+												<i class="icons icon-check-1"></i>
+                                                                                                        <p class="title"><?php print t('Book:') ?></p>
+                                                                                                        <p class="categories"><?php print render($content['field_register_now_external_url_']); ?></p>
+                                                                                                <?php endif; ?>
+												</div>
+												<div class="event-meta-block animate-onscroll">
 												<i class="icons icon-share"></i>
 												<p class="title"><?php print t('Share This')?></p>
 												<ul class="social-share">
